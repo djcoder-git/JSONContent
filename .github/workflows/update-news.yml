@@ -20,8 +20,8 @@ jobs:
         run: scrapy runspider ./scripts/khabar.py -O onlinekbr.json
       - name: Commit changes
         run: |
-          git config user.name '${{ secrets.MAIN_USERNAME }}'
-          git config user.email '${{ secrets.MAIN_EMAIL }}'
+          git config --global Ashim Shakya '${{ secrets.MAIN_USERNAME }}'
+          git config --global ashim44shakya@gmail.com '${{ secrets.MAIN_EMAIL }}'
           git add -f onlinekbr.json
           git commit -m "Update onlinekbr.json"
           git push
