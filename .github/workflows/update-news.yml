@@ -1,10 +1,8 @@
 name: News from onlinekhabar
-
-on:
+'on':
   schedule:
-    - cron: '55 4 * * 0-5'  # This schedules the job at 4:55 AM from Sunday (0) to Friday (5)
-  workflow_dispatch:
-
+    - cron: 55 4 * * 0-5
+  workflow_dispatch: null
 jobs:
   scrape:
     runs-on: ubuntu-latest
@@ -15,7 +13,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
-          python-version: '3.x'
+          python-version: 3.x
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Run Scrapy spider
@@ -28,4 +26,4 @@ jobs:
           git commit -m "Update onlinekbr.json"
           git push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
