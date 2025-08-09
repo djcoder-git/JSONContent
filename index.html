@@ -1,79 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movie List</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        background-color: #f4f4f4;
-      }
-      h1 {
-        text-align: center;
-      }
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-      }
-      th,
-      td {
-        padding: 10px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-      }
-      th {
-        background-color: #4caf50;
-        color: white;
-      }
-      tr:hover {
-        background-color: #f1f1f1;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>News Titles from Online Khabar</h1>
-    <table id="movieTable">
-      <thead>
-        <tr>
-          <th>Title</th>
-          <!-- <th>Grade</th>
-          <th>Run Time</th> -->
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Movie data will be inserted here -->
-      </tbody>
-    </table>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JSON File Viewer (Dropdown)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #1e1e1e;
+      color: #f5f5f5;
+    }
+    h2, #fileName {
+      font-weight: bold;
+    }
+    select {
+      padding: 6px;
+      font-size: 1em;
+      background-color: #2b2b2b;
+      color: #f5f5f5;
+      border: 1px solid #555;
+      margin-bottom: 10px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 15px;
+      background-color: #2b2b2b;
+    }
+    th, td {
+      border: 1px solid #555;
+      padding: 8px;
+      text-align: left;
+      color: #f5f5f5;
+    }
+    th {
+      background-color: #3c3c3c;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    tr:nth-child(even) {
+      background-color: #252525;
+    }
+    tr:nth-child(odd) {
+      background-color: #2b2b2b;
+    }
+    tr:hover {
+      background-color: #444;
+    }
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+    #fileName {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
 
-    <script>
-      // Fetching movie data from mv.txt file in the data folder
-      fetch("onlinekbr.json")
-        .then((response) => response.json()) // Parsing the response as JSON
-        .then((movieData) => {
-          const tableBody = document
-            .getElementById("movieTable")
-            .getElementsByTagName("tbody")[0];
+<h2>Select JSON File to Display</h2>
 
-          movieData.forEach((movie) => {
-            const row = tableBody.insertRow();
-            const cellTitle = row.insertCell(0);
-            // const cellGrade = row.insertCell(1);
-            // const cellRunTime = row.insertCell(2);
+<!-- Dropdown list of JSON files -->
+<select id="fileSelect">
+  <option value="">-- Select a JSON file --</option>
+  <option value="bigmovnscs.json">bigmovnscs.json</option>
+  <option value="example1.json">example1.json</option>
+  <option value="example2.json">example2.json</option>
+</select>
 
-            // Trim whitespace and replace newlines in title
-            cellTitle.textContent = movie.title.trim().replace(/\r?\n|\r/g, "");
-            // cellGrade.textContent = movie.grade ? movie.grade : "N/A"; // Display N/A if grade is null
-            // cellRunTime.textContent = movie.runTime
-              //.trim()
-              //.replace(/\r?\n|\r/g, "");
-          });
+<div id="fileName"></div>
+<div id="tableContainer"></div>
+
+<script>
+document.getElementById('fileSelect').addEventListener('change', function() {
+    const fileName = this.value;
+    if (!fileName) {
+        document.getElementById('fileName').textContent = '';
+        document.getElementById('tableContainer').innerHTML = '';
+        return;
+    }
+
+    // Remove extension & make uppercase for display
+    const displayName = fileName.replace(/\.[^/.]+$/, "").toUpperCase();
+    document.getElementById('fileName').textContent = `File: ${displayName}`;
+
+    fetch(fileName)
+        .then(response => {
+            if (!response.ok) throw new Error('File not found');
+            return response.json();
         })
-        .catch((error) => {
-          console.error("Error fetching movie data:", error);
+        .then(jsonData => {
+            if (!Array.isArray(jsonData)) {
+                document.getElementById('tableContainer').innerHTML = 
+                    '<p class="error">JSON file must contain an array of objects.</p>';
+                return;
+            }
+
+            const columns = [...new Set(jsonData.flatMap(obj => Object.keys(obj)))];
+
+            let tableHTML = '<table><thead><tr>';
+            columns.forEach(col => {
+                tableHTML += `<th>${col}</th>`;
+            });
+            tableHTML += '</tr></thead><tbody>';
+
+            jsonData.forEach(item => {
+                tableHTML += '<tr>';
+                columns.forEach(col => {
+                    tableHTML += `<td>${item[col] !== undefined ? item[col] : ''}</td>`;
+                });
+                tableHTML += '</tr>';
+            });
+
+            tableHTML += '</tbody></table>';
+            document.getElementById('tableContainer').innerHTML = tableHTML;
+        })
+        .catch(err => {
+            document.getElementById('tableContainer').innerHTML = 
+                `<p class="error">Error: ${err.message}</p>`;
         });
-    </script>
-  </body>
+});
+</script>
+
+</body>
 </html>
