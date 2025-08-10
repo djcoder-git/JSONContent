@@ -2,24 +2,37 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>JSON File Viewer (Dropdown)</title>
+  <title>JSON File Viewer (Menu Version)</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 20px;
+      margin: 0;
       background-color: #1e1e1e;
       color: #f5f5f5;
     }
-    h2, #fileName {
-      font-weight: bold;
-    }
-    select {
-      padding: 6px;
-      font-size: 1em;
+    /* Menu icon */
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
       background-color: #2b2b2b;
+      border-bottom: 1px solid #555;
+    }
+    /* Dropdown menu */
+    .menu-list {
+      display: none;
+      background-color: #2b2b2b;
+      border-bottom: 1px solid #555;
+    }
+    .menu-list a {
+      display: block;
+      padding: 10px;
       color: #f5f5f5;
-      border: 1px solid #555;
-      margin-bottom: 10px;
+      text-decoration: none;
+      border-top: 1px solid #444;
+    }
+    .menu-list a:hover {
+      background-color: #444;
     }
     table {
       border-collapse: collapse;
@@ -54,75 +67,92 @@
     #fileName {
       margin-top: 10px;
       font-size: 1.2em;
+      font-weight: bold;
+    }
+    #fileTimestamp {
+      font-size: 0.9em;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
 
-<h2>Select JSON File to Display</h2>
+<!-- Menu Icon -->
+<div class="menu-icon" onclick="toggleMenu()">☰ Menu</div>
 
-<!-- Dropdown list -->
-<select id="fileSelect">
-  <option value="">-- Select a JSON file --</option>
-  <option value="bigmovnscs.json">bigmovnscs</option>
-  <option value="cdcupcomming.json">cdcupcomming</option>
-  <option value="onlinekbr.json">onlinekbr</option>
-  <option value="technokbr.json">technokbr</option>
-  <option value="ytsmovies.json">ytsmovies</option>
-</select>
+<!-- Menu List -->
+<div class="menu-list" id="menuList">
+  <a href="https://ashimshakya.com.np/" target="_blank">🏠 Home</a>
+  <a href="#" onclick="loadJSON('bigmovnscs.json', 'Comming Soon movies in Big Cinema Hall')">🎬 Comming Soon movies in Big Cinema Hall</a>
+  <a href="#" onclick="loadJSON('cdcupcomming.json', 'Comming Soon movies in CDC Cinema Hall')">🎬 Comming Soon movies in CDC Cinema Hall</a>
+  <a href="#" onclick="loadJSON('onlinekbr.json', 'Top News heading from Online khabar')">📰 Top News heading from Online khabar</a>
+  <a href="#" onclick="loadJSON('technokbr.json', 'Top Technology news from online khabar')">💻 Top Technology news from online khabar</a>
+  <a href="#" onclick="loadJSON('ytsmovies.json', 'Movie List from YTS movie website')">🎥 Movie List from YTS movie website</a>
+</div>
 
-<div id="fileName"></div>
-<div id="tableContainer"></div>
+<div style="padding: 15px;">
+  <div id="fileName"></div>
+  <div id="fileTimestamp"></div>
+  <div id="tableContainer"></div>
+</div>
 
 <script>
-document.getElementById('fileSelect').addEventListener('change', function() {
-    const fileName = this.value;
-    if (!fileName) {
-        document.getElementById('fileName').textContent = '';
-        document.getElementById('tableContainer').innerHTML = '';
+function toggleMenu() {
+  const menu = document.getElementById('menuList');
+  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+}
+
+function loadJSON(fileName, displayName) {
+  document.getElementById('fileName').textContent = displayName.toUpperCase();
+  document.getElementById('tableContainer').innerHTML = '';
+  document.getElementById('fileTimestamp').textContent = '';
+
+  fetch(fileName)
+    .then(response => {
+      if (!response.ok) throw new Error('File not found');
+      // Capture last-modified timestamp from server headers if available
+      const lastModified = response.headers.get('Last-Modified');
+      if (lastModified) {
+        const date = new Date(lastModified);
+        document.getElementById('fileTimestamp').textContent = 
+          'Last updated: ' + date.toLocaleString();
+      }
+      return response.json();
+    })
+    .then(jsonData => {
+      if (!Array.isArray(jsonData)) {
+        document.getElementById('tableContainer').innerHTML = 
+          '<p class="error">JSON file must contain an array of objects.</p>';
         return;
-    }
+      }
 
-    // Remove extension & make uppercase for display
-    const displayName = fileName.replace(/\.[^/.]+$/, "").toUpperCase();
-    document.getElementById('fileName').textContent = `File: ${displayName}`;
+      const columns = [...new Set(jsonData.flatMap(obj => Object.keys(obj)))];
 
-    fetch(fileName)
-        .then(response => {
-            if (!response.ok) throw new Error('File not found');
-            return response.json();
-        })
-        .then(jsonData => {
-            if (!Array.isArray(jsonData)) {
-                document.getElementById('tableContainer').innerHTML = 
-                    '<p class="error">JSON file must contain an array of objects.</p>';
-                return;
-            }
+      let tableHTML = '<table><thead><tr>';
+      columns.forEach(col => {
+        tableHTML += `<th>${col}</th>`;
+      });
+      tableHTML += '</tr></thead><tbody>';
 
-            const columns = [...new Set(jsonData.flatMap(obj => Object.keys(obj)))];
-
-            let tableHTML = '<table><thead><tr>';
-            columns.forEach(col => {
-                tableHTML += `<th>${col}</th>`;
-            });
-            tableHTML += '</tr></thead><tbody>';
-
-            jsonData.forEach(item => {
-                tableHTML += '<tr>';
-                columns.forEach(col => {
-                    tableHTML += `<td>${item[col] !== undefined ? item[col] : ''}</td>`;
-                });
-                tableHTML += '</tr>';
-            });
-
-            tableHTML += '</tbody></table>';
-            document.getElementById('tableContainer').innerHTML = tableHTML;
-        })
-        .catch(err => {
-            document.getElementById('tableContainer').innerHTML = 
-                `<p class="error">Error: ${err.message}</p>`;
+      jsonData.forEach(item => {
+        tableHTML += '<tr>';
+        columns.forEach(col => {
+          tableHTML += `<td>${item[col] !== undefined ? item[col] : ''}</td>`;
         });
-});
+        tableHTML += '</tr>';
+      });
+
+      tableHTML += '</tbody></table>';
+      document.getElementById('tableContainer').innerHTML = tableHTML;
+    })
+    .catch(err => {
+      document.getElementById('tableContainer').innerHTML = 
+        `<p class="error">Error: ${err.message}</p>`;
+    });
+
+  // Close the menu after selection
+  toggleMenu();
+}
 </script>
 
 </body>
