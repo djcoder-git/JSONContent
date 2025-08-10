@@ -85,7 +85,7 @@ document.getElementById('fileSelect').addEventListener('change', function() {
 
     // Remove extension & make uppercase for display
     const displayName = fileName.replace(/\.[^/.]+$/, "").toUpperCase();
-    document.getElementById('fileName').textContent = File: ${displayName};
+    document.getElementById('fileName').textContent = `File: ${displayName}`;
 
     fetch(fileName)
         .then(response => {
@@ -94,7 +94,8 @@ document.getElementById('fileSelect').addEventListener('change', function() {
         })
         .then(jsonData => {
             if (!Array.isArray(jsonData)) {
-                document.getElementById('tableContainer').innerHTML = '<p class="error">JSON file must contain an array of objects.</p>';
+                document.getElementById('tableContainer').innerHTML = 
+                    '<p class="error">JSON file must contain an array of objects.</p>';
                 return;
             }
 
@@ -102,14 +103,14 @@ document.getElementById('fileSelect').addEventListener('change', function() {
 
             let tableHTML = '<table><thead><tr>';
             columns.forEach(col => {
-                tableHTML += <th>${col}</th>;
+                tableHTML += `<th>${col}</th>`;
             });
             tableHTML += '</tr></thead><tbody>';
 
             jsonData.forEach(item => {
                 tableHTML += '<tr>';
                 columns.forEach(col => {
-                    tableHTML += <td>${item[col] !== undefined ? item[col] : ''}</td>;
+                    tableHTML += `<td>${item[col] !== undefined ? item[col] : ''}</td>`;
                 });
                 tableHTML += '</tr>';
             });
@@ -118,11 +119,11 @@ document.getElementById('fileSelect').addEventListener('change', function() {
             document.getElementById('tableContainer').innerHTML = tableHTML;
         })
         .catch(err => {
-            document.getElementById('tableContainer').innerHTML = <p class="error">Error: ${err.message}</p>;
+            document.getElementById('tableContainer').innerHTML = 
+                `<p class="error">Error: ${err.message}</p>`;
         });
 });
 </script>
 
 </body>
 </html>
-
