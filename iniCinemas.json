@@ -1,111 +1,17 @@
 [
-  {
-    "title": "War 2",
-    "runtime": "2 hours 59 mins",
-    "poster": "<a href='https://inicinemas.com/Modules/CineUploadFiles/Movie/Image/War2_620x780_219318.png' target='_blank'>View Poster</a>",
-    "youtube_trailer": "<a href='https://youtu.be/mjBym9uKth4?feature=shared' target='_blank'>Watch Trailer</a>",
-    "status": "now-showing"
-  },
-  {
-    "title": "Coolie",
-    "runtime": "2 hours 50 mins",
-    "poster": "<a href='https://inicinemas.com/Modules/CineUploadFiles/Movie/Image/Coolie_620x780_N_296813.png' target='_blank'>View Poster</a>",
-    "youtube_trailer": "<a href='https://youtu.be/5-qi2TGQ4a4?si=4vjbjYFzKC1VB0h8' target='_blank'>Watch Trailer</a>",
-    "status": "now-showing"
-  },
-  {
-    "title": "Mohar",
-    "runtime": "2 hours 18 mins",
-    "poster": "<a href='https://inicinemas.com/Modules/CineUploadFiles/Movie/Image/Mohar_620x780_N_489900.png' target='_blank'>View Poster</a>",
-    "youtube_trailer": "<a href='https://youtu.be/COxFguJ1Q2Y?si=Oj3Prm8j8t_In9GX' target='_blank'>Watch Trailer</a>",
-    "status": "now-showing"
-  },
-  {
-    "status": "next-release",
-    "title": "Magne Raja",
-    "release": "August 22",
-    "runtime": "2 hours 29 mins",
-    "poster": "<a href='https://inicinemas.com/Modules/CineUploadFiles/Movie/image/MR_620x780_249131.png' target='_blank'>View Poster</a>",
-    "youtube_trailer": "<a href='https://youtu.be/x2QZl1dqWbY?feature=shared' target='_blank'>Watch Trailer</a>"
-  },
-  {
-    "status": "next-release",
-    "title": "Janai Harayeko Manche",
-    "release": "August 22",
-    "runtime": "2 hours 33 mins",
-    "poster": "<a href='https://inicinemas.com/Modules/CineUploadFiles/Movie/image/JHKM_620x780_982247.png' target='_blank'>View Poster</a>",
-    "youtube_trailer": "<a href='https://youtu.be/bJl4i00eOas?feature=shared' target='_blank'>Watch Trailer</a>"
-  },
-  {
-    "status": "next-release",
-    "title": "Taraharu",
-    "release": "August 22",
-    "runtime": "2 hours 29 mins",
-    "poster": "<a href='https://inicinemas.com/Modules/CineUploadFiles/Movie/image/Taraharu_620x780_524945.png' target='_blank'>View Poster</a>",
-    "youtube_trailer": "<a href='https://youtu.be/OrrpEg_Yosg?feature=shared' target='_blank'>Watch Trailer</a>"
-  },
-  {
-    "status": "coming-soon",
-    "title": "Koshedhunga",
-    "release": "August 28",
-    "runtime": "2 hours",
-    "poster": "<a href='https://inicinemas.com/Modules/CineUploadFiles/Movie/image/POSTER_567486.png' target='_blank'>View Poster</a>",
-    "youtube_trailer": "<a href='https://youtu.be/TYAJUABdVgE?si=qR5WrGD1M1jbx_4T' target='_blank'>Watch Trailer</a>"
-  },
-  {
-    "status": "coming-soon",
-    "title": "Gunyo Cholo",
-    "release": "August 29",
-    "runtime": "2 hours",
-    "poster": "<a href='https://inicinemas.com/Modules/CineUploadFiles/Movie/image/POSTER_960015.png' target='_blank'>View Poster</a>",
-    "youtube_trailer": "<a href='https://youtu.be/3Yar3NOF7Gs?si=3OWpiVnbD1yERPjW' target='_blank'>Watch Trailer</a>"
-  },
-  {
-    "status": "coming-soon",
-    "title": "The Conjuring: Last Rites",
-    "release": "September 05",
-    "runtime": "2 hours",
-    "poster": "<a href='https://inicinemas.com/Modules/CineUploadFiles/Movie/image/TheConjuringLastRites_620x780_463998.png' target='_blank'>View Poster</a>",
-    "youtube_trailer": "<a href='https://youtu.be/FSAz556s0fM?si=IPI3v1gvIAr60Ky0' target='_blank'>Watch Trailer</a>"
-  },
-  {
-    "status": "coming-soon",
-    "title": "Rimai",
-    "release": "September 05",
-    "runtime": "2 hours 30 mins",
-    "poster": "<a href='https://inicinemas.com/Modules/CineUploadFiles/Movie/image/Rimai_620x780_N_638464.png' target='_blank'>View Poster</a>",
-    "youtube_trailer": "<a href='https://youtu.be/SRsqzVAPqoM?si=_g4R2dKNCsTgxXGC' target='_blank'>Watch Trailer</a>"
-  },
-  {
-    "status": "coming-soon",
-    "title": "Demon Slayer - Kimetsu no Yaiba - The Movie: Infinity Castle",
-    "release": "September 12",
-    "runtime": "2 hours 30 mins",
-    "poster": "<a href='https://inicinemas.com/Modules/CineUploadFiles/Movie/image/DS_620x780_410309.png' target='_blank'>View Poster</a>",
-    "youtube_trailer": "<a href='https://youtu.be/x7uLutVRBfI?feature=shared' target='_blank'>Watch Trailer</a>"
-  },
-  {
-    "status": "coming-soon",
-    "title": "Abhimanyu Chapter 1",
-    "release": "September 12",
-    "runtime": "2 hours",
-    "poster": "<a href='https://inicinemas.com/Modules/CineUploadFiles/Movie/image/Abhimanyu_620x780_256472.png' target='_blank'>View Poster</a>",
-    "youtube_trailer": "<a href='https://youtu.be/vvYaKp8WNAs?si=9JCW-1lKvBzHPrSm' target='_blank'>Watch Trailer</a>"
-  },
-  {
-    "status": "coming-soon",
-    "title": "Jaari 2",
-    "release": "September 19",
-    "runtime": "2 hours",
-    "poster": "<a href='https://inicinemas.com/Modules/CineUploadFiles/Movie/image/poster_550449.png' target='_blank'>View Poster</a>",
-    "youtube_trailer": "<a href='https://youtu.be/Lk5klPgwbCc?si=JdQNrpAK_x2E4_Ci' target='_blank'>Watch Trailer</a>"
-  },
-  {
-    "status": "coming-soon",
-    "title": "Maitighar",
-    "release": "September 29",
-    "runtime": "2 hours",
-    "poster": "<a href='https://inicinemas.com/Modules/CineUploadFiles/Movie/image/Maitighar_620x780_853894.png' target='_blank'>View Poster</a>",
-    "youtube_trailer": "<a href='www.youtube.com' target='_blank'>Watch Trailer</a>"
-  }
+{"status": "now-showing", "url": "https://inicinemas.com/ShowDetail.aspx/movie/30599", "name": "War 2", "genre": "Action, Thriller, Adventure", "synopsis": "Sequel to the 2019 action-thriller film \"War\".\n6th Movie of the YRF Spy Universe after Ek Tha Tiger, Tiger Zinda Hai, War, Pathan, and Tiger 3.", "director": "", "cast": ["Hrithik Roshan, N.T. R. Jr, Kiara Advani", "August 14, 2025", "2 hours 59 mins"], "poster": "https://inicinemas.com/Modules/CineUploadFiles/Movie/Image/War2_620x780_219318.png", "runtime": "2 hours 59 mins", "trailer": "https://youtu.be/mjBym9uKth4?feature=shared"},
+{"status": "coming-soon", "url": "https://inicinemas.com/ShowDetail.aspx/movie/30628", "name": "Rimai", "genre": "Social drama", "synopsis": "Rimai is an upcoming Nepali social drama film directed by Khil Bahadur Gurung and written by Upendra Subba. The film stars Dayahang Rai and Rishma Gurung, among others, with shooting currently taking place in Gorkha, Siranchowk.", "director": "", "cast": ["Dayahang Rai, Gaumaya Gurung, Rishma Gurung, Arpan Thapa, Buddhi Tamang,", "September 05, 2025", "2 hours 30 mins"], "poster": "https://inicinemas.com/Modules/CineUploadFiles/Movie/image/Rimai_620x780_N_638464.png", "runtime": "2 hours 30 mins", "trailer": "https://youtu.be/SRsqzVAPqoM?si=_g4R2dKNCsTgxXGC"},
+{"status": "coming-soon", "url": "https://inicinemas.com/ShowDetail.aspx/movie/30613", "name": "The Conjuring: Last Rites", "genre": "Horror, Mystery, Thriller", "synopsis": "Paranormal investigators Ed and Lorraine Warren take on one last terrifying case involving mysterious entities they must confront.", "director": "", "cast": ["Vera Farmiga, Patrick Wilson, Ben Hardy, Elliot Cowan", "September 05, 2025", "2 hours"], "poster": "https://inicinemas.com/Modules/CineUploadFiles/Movie/image/TheConjuringLastRites_620x780_463998.png", "runtime": "2 hours", "trailer": "https://youtu.be/FSAz556s0fM?si=IPI3v1gvIAr60Ky0"},
+{"status": "coming-soon", "url": "https://inicinemas.com/ShowDetail.aspx/movie/30600", "name": "Gunyo Cholo", "genre": "Drama", "synopsis": "Gulabi, a trans-woman is groomed by his patriarchal father to join the military. His father disowns him, leading him to live a life of prostitution in Kathmandu.", "director": "", "cast": ["Najir Husen, Bishal Pahari, Susil Sitaulam, Sanchita Luitel", "August 29, 2025", "2 hours"], "poster": "https://inicinemas.com/Modules/CineUploadFiles/Movie/image/POSTER_960015.png", "runtime": "2 hours", "trailer": "https://youtu.be/3Yar3NOF7Gs?si=3OWpiVnbD1yERPjW"},
+{"status": "coming-soon", "url": "https://inicinemas.com/ShowDetail.aspx/movie/30630", "name": "Maitighar", "genre": "Social Drama", "synopsis": "Purnima, a kind village girl raised by her uncle, falls in love with Sonam, a boy without caste or background. Her uncle disapproves and arranges her marriage to Vinay, the son of a wealthy man.\n\nBut her grandfather, Sant Bahadur, supports her love and makes a bold request: the groom must follow an old tradition choose his bride from a group of veiled girls without seeing her face. If he picks wrong, he must stay as a ghar jamai in the bride’s home.\n\nChandra, Vinay’s father, agrees. Though unhappy, Vinay and the matchmaker Haribaje secretly visit the village to uncover the real bride. But in a village full of secrets and emotions, finding true love becomes a challenge of the heart.", "director": "", "cast": ["Dhiraj Magar, Kedar Prasad Ghimire, Prakash Saput, Upasana Singh Thakuri", "September 29, 2025", "2 hours"], "poster": "https://inicinemas.com/Modules/CineUploadFiles/Movie/image/Maitighar_620x780_853894.png", "runtime": "2 hours", "trailer": "www.youtube.com"},
+{"status": "coming-soon", "url": "https://inicinemas.com/ShowDetail.aspx/movie/30633", "name": "Jaari 2", "genre": "Drama", "synopsis": "Jaari 2 follows Namsang and Hangma as they embark on a new chapter of married life. At the heart of their journey is the Chyabrung, the Limbu community’s cherished drum, whose rhythms echo through the hills as a symbol of love, identity, and resilience. Guided by its beats, Namsang learns to embrace companionship, humility, and commitment while navigating personal struggles and the turbulent tides of Nepal’s history.", "director": "", "cast": ["Dayahang Rai,   Miruna Magar,   Bijay Baral,   Buddhi Tamang", "September 19, 2025", "2 hours 15 mins"], "poster": "https://inicinemas.com/Modules/CineUploadFiles/Movie/image/poster_550449.png", "runtime": "2 hours 15 mins", "trailer": "https://youtu.be/Lk5klPgwbCc?si=JdQNrpAK_x2E4_Ci"},
+{"status": "coming-soon", "url": "https://inicinemas.com/ShowDetail.aspx/movie/30627", "name": "Abhimanyu Chapter 1", "genre": "Social Thriller, Suspense, Mystery, Drama", "synopsis": "“Abhimanyu – Chapter 1” is a gripping social thriller that exposes the brutal reality of dowry culture through a suspenseful narrative filled with twists, emotions, and a race for justice.", "director": "", "cast": ["Kameshwor Chaurasiya, Gaumaya Gurung, Shishir Wangdel, Sarita Giri , Laxmi Bardewa, Prakash Dahal", "September 12, 2025", "2 hours"], "poster": "https://inicinemas.com/Modules/CineUploadFiles/Movie/image/Abhimanyu_620x780_256472.png", "runtime": "2 hours", "trailer": "https://youtu.be/vvYaKp8WNAs?si=9JCW-1lKvBzHPrSm"},
+{"status": "coming-soon", "url": "https://inicinemas.com/ShowDetail.aspx/movie/30623", "name": "Demon Slayer - Kimetsu no Yaiba - The Movie: Infinity Castle", "genre": "Anime, Dark Fantasy, Action, Adventure, Animation", "synopsis": "The Demon Slayer Corps are drawn into the Infinity Castle, where Tanjiro, Nezuko, and the Hashira face terrifying Upper Rank demons in a desperate fight as the final battle against Muzan Kibutsuji begins.", "director": "", "cast": ["Natsuki Hanae, Saori Hayami, Akari Kito, Yoshitsugu Matsuka, Hiro Shimono, Reina Ueda", "September 12, 2025", "2 hours 30 mins"], "poster": "https://inicinemas.com/Modules/CineUploadFiles/Movie/image/DS_620x780_410309.png", "runtime": "2 hours 30 mins", "trailer": "https://youtu.be/x7uLutVRBfI?feature=shared"},
+{"status": "now-showing", "url": "https://inicinemas.com/ShowDetail.aspx/movie/30625", "name": "Coolie", "genre": "Action", "synopsis": "Delves into a man's relentless quest for vengeance since youth, driven by righting past wrongs, shaping his very existence. Viewers experience the complexities of his tumultuous vendetta journey.", "director": "", "cast": ["Rajnikant, Nagarajuna, Satyaraj, Shruti Haassan, Aamir Khan", "August 14, 2025", "2 hours 50 mins"], "poster": "https://inicinemas.com/Modules/CineUploadFiles/Movie/Image/Coolie_620x780_N_296813.png", "runtime": "2 hours 50 mins", "trailer": "https://youtu.be/5-qi2TGQ4a4?si=4vjbjYFzKC1VB0h8"},
+{"status": "next-release", "url": "https://inicinemas.com/ShowDetail.aspx/movie/30629", "name": "Taraharu", "genre": "Social drama", "synopsis": "Taraharu is a story of those who bring the light of life for a person messed up in completely dark circumstances.", "director": "", "cast": ["Menuka pradhan, Avash adhakari, Mira khadka", "August 22, 2025", "2 hours 29 mins"], "poster": "https://inicinemas.com/Modules/CineUploadFiles/Movie/image/Taraharu_620x780_524945.png", "runtime": "2 hours 29 mins", "trailer": "https://youtu.be/OrrpEg_Yosg?feature=shared"},
+{"status": "now-showing", "url": "https://inicinemas.com/", "name": null, "genre": null, "synopsis": null, "director": null, "cast": [], "poster": null, "runtime": "0 hours", "trailer": "href='javascript:void(0)'"},
+{"status": "next-release", "url": "https://inicinemas.com/ShowDetail.aspx/movie/30622", "name": "Janai Harayeko Manche", "genre": "Comedy Drama", "synopsis": "Janai harayeko manche is a story of migration, longing, and rediscovery. It’s a cinematic ode to the everyday Nepali a man with a suitcase full of dreams, a pocket full of regrets, and a heart finally ready to embrace the home he tried to leave behind.", "director": "", "cast": ["Vijay Baral, Keki Adhikari, Miruna Magar", "August 22, 2025", "2 hours 23 mins"], "poster": "https://inicinemas.com/Modules/CineUploadFiles/Movie/image/JHKM_620x780_982247.png", "runtime": "2 hours 23 mins", "trailer": "https://youtu.be/bJl4i00eOas?feature=shared"},
+{"status": "coming-soon", "url": "https://inicinemas.com/ShowDetail.aspx/movie/30632", "name": "Koshedhunga", "genre": "Drama", "synopsis": "Koshedhunga follows Sital, a woman torn between love, hardship, and survival in a mid-hill village of Nepal, as her husband migrates to the Gulf-exploring sacrifice, unemployment, and the price of dreams.", "director": "", "cast": ["Surakshya Panta, Niti Shah, Reecha Sharma, Aaryan Sigdel", "August 28, 2025", "2 hours"], "poster": "https://inicinemas.com/Modules/CineUploadFiles/Movie/image/POSTER_567486.png", "runtime": "2 hours", "trailer": "https://youtu.be/TYAJUABdVgE?si=qR5WrGD1M1jbx_4T"},
+{"status": "now-showing", "url": "https://inicinemas.com/ShowDetail.aspx/movie/30603", "name": "Mohar", "genre": "Social Drama, Romance, Thriller, Suspense", "synopsis": "The film Mohar is a story about an unwritten rule. It attempts to portray the obstacles faced by Sarkar Chand (Arjun Jung Shahi) as he tries to continue the \"Deuki custom,\" which has prevailed for generations in the far-western region of Nepal, in the hope of securing fortune and legacy for his offspring. The film features Paul Shah, Benisha Hamal, Niti Shah, Sara Sharma, and others in major roles. It conveys the message that this practice still exists today.", "director": "", "cast": ["Paul Shah, Niti Shah, Benisha Hamal, Arjun Jung Sahi", "August 08, 2025", "2 hours 18 mins"], "poster": "https://inicinemas.com/Modules/CineUploadFiles/Movie/Image/Mohar_620x780_N_489900.png", "runtime": "2 hours 18 mins", "trailer": "https://youtu.be/COxFguJ1Q2Y?si=Oj3Prm8j8t_In9GX"},
+{"status": "next-release", "url": "https://inicinemas.com/ShowDetail.aspx/movie/30614", "name": "Maagne Raja", "genre": "Comedy", "synopsis": "Kuber Sharma aka Maagne,  debt-ridden man drowning under the weight of financial burdens, sees no way out of his grim reality—until a sudden and mysterious windfall changes everything. But as Sharma attempts to retreat into a quiet existence, his newfound fortune draws attention from people.Caught in a web of deception, greed, and moral dilemmas, Maagne must confront a harsh truth: escaping poverty was just the beginning—surviving wealth is the real challenge", "director": "", "cast": ["Kedar Ghimire, Barsha Shiwakoti, Wilson Bikram Rai, Shishir Wangdel", "August 22, 2025", "2 hours 29 mins"], "poster": "https://inicinemas.com/Modules/CineUploadFiles/Movie/image/MR_620x780_249131.png", "runtime": "2 hours 29 mins", "trailer": "https://youtu.be/x2QZl1dqWbY?feature=shared"}
 ]
